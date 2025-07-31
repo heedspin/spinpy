@@ -1,0 +1,44 @@
+# Core scientific computing
+numpy<2.0
+pandas
+matplotlib
+seaborn
+
+# Chemistry and molecular biology
+rdkit
+biopython
+scikit-learn
+scipy
+
+# Visualization and plotting
+plotly
+altair
+
+# Jupyter and interactive computing
+jupyter
+jupyterlab
+ipywidgets
+
+# Data processing and file formats
+openpyxl
+xlrd
+h5py
+
+# Molecular structure and analysis
+# mdanalysis  # Temporarily commented - has NumPy 2.0 compatibility issues
+nglview
+py3dmol
+
+# Statistical analysis
+statsmodels
+
+# Machine learning for molecules
+# mordred  # May have similar NumPy issues
+# chemml   # May have similar NumPy issues
+
+# Network analysis (useful for protein interactions)
+networkx
+
+# Progress bars and utilities
+tqdm
+joblib
