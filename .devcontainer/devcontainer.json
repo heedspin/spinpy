@@ -16,7 +16,7 @@
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "pip3 install --user -r .devcontainer/requirements.txt && npm install -g @anthropic-ai/claude-code",
+	"postCreateCommand": "pip3 install --user -r requirements.txt && npm install -g @anthropic-ai/claude-code",
 
 	// Configure tool-specific properties.
 	"customizations": {
