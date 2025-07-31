@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  spinpy:
+    build: .
+    image: oakwoodlending/spinpy:latest
+    container_name: spinpy
+    restart: unless-stopped
+    volumes:
+      # Mount for persistent data storage
+      - ./data:/spinpy/tmp
+    environment:
+      - PYTHONUNBUFFERED=1
+    # Uncomment if you need to expose ports
+    # ports:
+    #   - "8000:8000"
+
+# Optional: Add a volume for persistent data
+volumes:
+  spinpy_data:
+    driver: local
