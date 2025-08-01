@@ -13,7 +13,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Create a non-root user for security
-RUN useradd --create-home --shell /bin/bash spinpy && chown -R spinpy:spinpy /spinpy
+RUN useradd -u 1000 -g 1000 --create-home --shell /bin/bash spinpy && chown -R spinpy:spinpy /spinpy
 USER spinpy
 
 # Command to run your application
