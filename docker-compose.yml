@@ -29,7 +29,3 @@ services:
             - .env
             - data/
 
-# Optional: Add a volume for persistent data
-volumes:
-  spinpy_data:
-    driver: local
