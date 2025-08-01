@@ -19,4 +19,4 @@ WORKDIR /spinpy
 # CMD sh -c "echo 'Inside Container:' && echo 'User: $(whoami) UID: $(id -u) GID: $(id -g)'"
 
 # Command to run your application
-CMD ["python", "main.py"]
+CMD ["python", "spinpy_server.py"]
