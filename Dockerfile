@@ -10,8 +10,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Create a custom user with UID 1234 and GID 1234
-RUN groupadd -g 1000 spinpygroup && \
-    useradd -m -u 1000 -g spinpygroup -s /bin/bash spinpy
+RUN groupadd -g 1002 spinpygroup && \
+    useradd -m -u 1002 -g spinpygroup -s /bin/bash spinpy
 
 USER spinpy
 WORKDIR /spinpy
