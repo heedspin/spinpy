@@ -3,7 +3,7 @@ services:
     build: .
     image: oakwoodlending/spinpy:latest
     container_name: spinpy
-    restart: unless-stopped
+    restart: no
     volumes:
       # Mount for persistent data storage
       - ./data:/spinpy/tmp
