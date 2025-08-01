@@ -9,14 +9,14 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the rest of the application
 COPY . .
 
-# Create a custom user with UID 1234 and GID 1234
-RUN groupadd -g 1002 spinpygroup && \
-    useradd -m -u 1002 -g spinpygroup -s /bin/bash spinpy
+ARG SPINPY_UID=1001
+ARG UBUNTU_GROUP=1000
+RUN useradd -m -u ${SPINPY_UID} -g ${UBUNTU_GROUP} -s /bin/bash spinpy
 
 USER spinpy
 WORKDIR /spinpy
 
-CMD sh -c "echo 'Inside Container:' && echo 'User: $(whoami) UID: $(id -u) GID: $(id -g)'"
+# CMD sh -c "echo 'Inside Container:' && echo 'User: $(whoami) UID: $(id -u) GID: $(id -g)'"
 
 # Command to run your application
 CMD ["python", "main.py"]
