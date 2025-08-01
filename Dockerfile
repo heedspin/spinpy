@@ -16,9 +16,7 @@ COPY . .
 ARG USER_ID=1000
 ARG GROUP_ID=1000
 
-RUN groupadd -g $GROUP_ID spinpy || true && \
-    useradd -u $USER_ID -g $GROUP_ID --create-home --shell /bin/bash spinpy && \
-    chown -R spinpy:spinpy /spinpy
+RUN groupadd -g 1000 spinpy && useradd -u 1000 -g 1000 -m -s /bin/bash spinpy
 
 USER spinpy
 
