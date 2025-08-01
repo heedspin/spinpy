@@ -16,7 +16,7 @@ COPY . .
 ARG USER_ID=1000
 ARG GROUP_ID=1000
 
-RUN groupadd -g 1000 spinpy && useradd -u 1000 -g 1000 -m -s /bin/bash spinpy
+RUN groupadd spinpy && useradd -g spinpy -m -s /bin/bash spinpy
 
 USER spinpy
 
