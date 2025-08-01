@@ -6,12 +6,28 @@ services:
     restart: no
     volumes:
       # Mount for persistent data storage
-      - ./data:/spinpy/tmp
+      - /home/ubuntu/data:/spinpy/data
+      # Mount source code for development
+      - .:/spinpy
     environment:
       - PYTHONUNBUFFERED=1
     # Uncomment if you need to expose ports
     # ports:
     #   - "8000:8000"
+    develop:
+      watch:
+        - action: sync
+          path: .
+          target: /spinpy
+          ignore:
+            - .git/
+            - __pycache__/
+            - "*.pyc"
+            - .pytest_cache/
+            - .coverage
+            - htmlcov/
+            - .env
+            - data/
 
 # Optional: Add a volume for persistent data
 volumes:
