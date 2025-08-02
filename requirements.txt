@@ -1,5 +1,6 @@
 ipdb
 flask
+rcsb-api
 
 # Core scientific computing
 numpy<2.0
